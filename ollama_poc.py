@@ -22,9 +22,9 @@ async def run_search() -> str:
         #     num_ctx=32000,
         # ),
         # llm=ChatOllama(model=os.getenv('OLLAMA_MODEL'), base_url=os.getenv('OLLAMA_BASE_URL'), temperature=0),
-        # task='Go to ebay.co.uk, search for laptop, sort by best rating, and give me the price of the first result',
-        task="Find flights on https://www.kayak.co.uk/ from Zurich to Beijing from 25.12.2024 to 02.02.2025.",
-        llm=ChatOllama(model="llama3.2:latest", base_url="http://127.0.0.1:11434", temperature=0),
+        task='Go to https://www.amazon.co.uk/, search for laptop, sort by best rating, and give me the price of the first result',
+        # task="Find flights on https://www.kayak.co.uk/ from Zurich to Beijing from 25.12.2024 to 02.02.2025.",
+        llm=ChatOllama(model="qwen2.5:14b", base_url="http://127.0.0.1:11434", temperature=0),
     )
 
     result = await agent.run()
